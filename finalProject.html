@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caramel Frappuccino</title>
+  </head>
+  <style>
+    h1 {
+      text-align: center;
+      color: #7b5fc3;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 18px;
+      color: #6e4577;
+      padding: 15px;
+      border: 1px solid;
+      border-radius: 4px;
+      line-height: 25px;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    p {
+      line-height: 1.5;
+      font-size: 18px;
+      margin: 20px 0 10px;
+      text-align: justify;
+      font-family: monospace;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      background: #6e4577;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 6px;
+      border: none;
+      box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.3);
+      transition: all 200ms ease-in-out;
+    }
+
+    body {
+      background: linear-gradient(#ceaa81, #adaaa6);
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+    .footer {
+      font-size: 14px;
+      text-align: center;
+    }
+    .learn_more {
+      display: block;
+      font-size: 14px;
+      text-decoration: none;
+      margin-bottom: 14px;
+    }
+
+    .learn_more:hover {
+      text-decoration: underline;
+      color: #6e4577;
+    }
+    .container {
+      margin: 0 auto;
+      padding: 10px 40px;
+      max-width: 600px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>I love Caramel Frappuccino!</h1>
+      <h2>From Starbucks</h2>
+      <hr />
+      <img
+        src="https://www.letseatcake.com/wp-content/uploads/2022/07/Starbucks-Caramel-Frappuccino-3.jpg"
+        alt="Caramel Fruppuccino"
+        width="300"
+      />
+
+      <hr />
+      <p>
+        Frappuccino is a line of blended iced coffee drinks sold by Starbucks.
+        It may consist of coffee or crème base, blended with ice and ingredients
+        such as flavored syrups and usually topped with whipped cream and or
+        spices. It may also include blended Starbucks refreshers. Frappuccinos
+        are also sold as bottled coffee beverages in grocery stores, convenience
+        stores and from vending machines.
+      </p>
+      <br />
+      <a
+        href="https://en.wikipedia.org/wiki/Frappuccino"
+        target="_blank"
+        class="learn_more"
+      >
+        <em>Learn more on wikipedia</em>
+      </a>
+      <button class="orderButton">👉 Order Now!</button>
+      <p class="footer">This page was built by Dzilafho Pia Mudau</p>
+    </div>
+    <script>
+      function orderNow() {
+        let name = prompt("What is your name?");
+        let email = prompt("Enter your email address");
+        let emoji = prompt("What is your favourite emoji😉?");
+
+        let button = document.querySelector("button");
+
+        button.innerHTML =
+          "Thank you for your order " +
+          name +
+          emoji +
+          ", we'll be in touch once its ready!";
+      }
+
+      let OrderNowButton = document.querySelector("button");
+
+      OrderNowButton.addEventListener("click", orderNow);
+    </script>
+  </body>
+</html>
